@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FEFEFE; /* pure-white */
+    --color-foreground: #1A1A1A; /* deep-black */
+    --color-border: rgba(44, 44, 44, 0.1); /* charcoal-10 */
+    --color-input: #FFFFFF; /* white */
+    --color-ring: #D4A574; /* rose-gold */
+    
+    /* Card Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #1A1A1A; /* deep-black */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #1A1A1A; /* deep-black */
+    
+    /* Muted Colors */
+    --color-muted: #F8F6F3; /* warm-pearl */
+    --color-muted-foreground: #6B6B6B; /* medium-gray */
+    
+    /* Primary Colors */
+    --color-primary: #2C2C2C; /* sophisticated-charcoal */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #8B7355; /* warm-taupe */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #D4A574; /* rose-gold */
+    --color-accent-foreground: #1A1A1A; /* deep-black */
+    
+    /* State Colors */
+    --color-destructive: #A67C5A; /* muted-terracotta */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    --color-success: #7A8471; /* sage-green */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    --color-warning: #C49B61; /* warm-amber */
+    --color-warning-foreground: #1A1A1A; /* deep-black */
+    
+    --color-error: #A67C5A; /* muted-terracotta */
+    --color-error-foreground: #FFFFFF; /* white */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+  }
+
+  body, p, span, div, button, input, textarea, select {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-accent {
+    font-family: 'Crimson Text', serif;
+  }
+}
+
+@layer components {
+  .hero-image-hover {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hero-image-hover:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+  }
+
+  .product-card-hover {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .product-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .content-reveal {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .content-reveal.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .backdrop-overlay {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .editorial-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
