@@ -1,4 +1,4 @@
-#👗👚🩱👠 Stylora
+##👗Stylora
 
 Stylora is a modern web application designed for fashion enthusiasts. It serves as a platform to explore fashion trends,
 gather inspiration, and stay updated with the latest styles. Whether you're looking for outfit ideas, seasonal trends, or fashion tips, Stylora is your go-to source.
